@@ -113,24 +113,27 @@ a{
     grid-template-columns: var(--grid--container);   
 }
 
-.banner-bees-name, .banner-bees {
+.banner-bees {
     grid-column: 2;             
 }
 
 .sidebar{
     display: grid;
-    grid-template-columns: 1fr minmax(290px) minmax(880px) 1fr;
+    grid-template-columns: 1fr minmax(200px,290px) minmax(auto,880px) 1fr;
 }
 
 .sidebar-left{
     grid-column: 2;
 }
 
-.sidebar ul{
-    display: block;
+.sidebar > ul{
+    grid-column: 2;    
 }
 
 .classified{
     grid-column: 3;
+    grid-row: 1;
 }
-
+.classified > div{
+    display: block;
+}

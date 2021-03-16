@@ -122,18 +122,53 @@ a{
     grid-template-columns: 1fr minmax(200px,290px) minmax(auto,880px) 1fr;
 }
 
-.sidebar-left{
-    grid-column: 2;
-}
 
-.sidebar > ul{
-    grid-column: 2;    
+/*
+Ajustes Código Café
+*/
+.sidebar__filter{
+    grid-column: 2;
 }
 
 .classified{
     grid-column: 3;
     grid-row: 1;
+    grid-auto-flow: row;
 }
 .classified > div{
-    display: block;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    margin-bottom: 4rem;
+}
+
+.classified > div h3{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.classified > div img{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.classified > div .classified__content{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.classified > div .classified__content span{
+    display:block;
+    width: 100%;
+}
+.classified > div button{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.classified > div ul{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.classified > div ul li{
+    margin: 0;
+    padding: .5rem;
 }

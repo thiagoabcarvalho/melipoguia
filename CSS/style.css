@@ -1,0 +1,136 @@
+:root{
+    --size--container: 1408px;
+    --grid--container: 1fr minmax(auto, var(--size--container)) 1fr;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    font-size: 16px;    
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: var(--grid--container);      
+}
+
+nav{
+    background: linear-gradient(0deg, rgba(251,183,18,1) 0%, rgba(254,209,6,1) 99%);
+    height: 90px;
+}
+
+.container-fluid{
+    grid-column: 2;
+    padding-top: 15px;    
+}
+
+.form-control {
+	outline: none;
+}
+
+.form-control[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+.form-control::-webkit-search-decoration,
+.form-control::-webkit-search-cancel-button {
+	display: none; 
+}
+
+.form-control[type=search] {
+	background: #ededed url(../IMG/icon-lupa.png) no-repeat 350px center;
+	border: solid 1px #707070;
+	padding: 9px 10px 9px 32px;
+	width: 350px;
+
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+.form-control:-moz-placeholder {
+	color: #999;
+}
+.form-control::-webkit-input-placeholder {
+	color: #999;
+}
+
+.search {
+    grid-column: 2;
+    position: absolute;
+    right: 230px;
+    top: 25px;       
+}
+
+.nav_header {
+    display: grid;
+    grid-template-columns: var(--grid--container);          
+}
+
+.justify-content-center{
+    grid-column: 2;
+}
+
+ul {
+    list-style: none;
+    text-transform: uppercase;
+    text-align:center;         
+}
+
+li{
+    display: inline-block;
+    padding: 20px 30px 0 30px;   
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: rooney-sans, sans-serif;    
+}
+
+.nav_header{    
+    display: block;
+    background: rgba(10, 10, 10, 0.6);
+    height: 60px;       
+}
+
+.img-hero{
+    width: 100%;
+    position: relative;
+    top: -60px;
+    z-index: -3;
+}
+
+.banner-bees{
+    display: grid;
+    grid-template-columns: var(--grid--container);   
+}
+
+.banner-bees-name, .banner-bees {
+    grid-column: 2;             
+}
+
+.sidebar{
+    display: grid;
+    grid-template-columns: 1fr minmax(290px) minmax(880px) 1fr;
+}
+
+.sidebar-left{
+    grid-column: 2;
+}
+
+.sidebar ul{
+    display: block;
+}
+
+.classified{
+    grid-column: 3;
+}
+

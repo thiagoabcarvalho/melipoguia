@@ -28,45 +28,16 @@ nav{
     padding-top: 15px;    
 }
 
+.sidebar-left form{
+    border-bottom: 1px solid #707070;
+    padding-bottom: 20px;
+}
 .form-control {
 	outline: none;
 }
 
-.form-control[type=search] {
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	font-family: inherit;
-	font-size: 100%;
-}
-
-.form-control::-webkit-search-decoration,
-.form-control::-webkit-search-cancel-button {
-	display: none; 
-}
-
-.form-control[type=search] {
-	background: #ededed url(../IMG/icon-lupa.png) no-repeat 350px center;
-	border: solid 1px #707070;
-	padding: 9px 10px 9px 32px;
-	width: 350px;
-
-	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
-
-.form-control:-moz-placeholder {
-	color: #999;
-}
-.form-control::-webkit-input-placeholder {
-	color: #999;
-}
-
-.search {
-    grid-column: 2;
-    position: absolute;
-    right: 230px;
-    top: 25px;       
+.form-sidebar{
+    padding-bottom: 20px;
 }
 
 .nav_header {
@@ -122,12 +93,148 @@ a{
     grid-template-columns: 1fr minmax(200px,290px) minmax(auto,880px) 1fr;
 }
 
+ /*formulário de busca menu*/
+ .form-control[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+
+.form-control::-webkit-search-decoration,
+.form-control::-webkit-search-cancel-button {
+	display: none; 
+}
+
+.form-control[type=search] {
+	background: #ededed url(../IMG/icon-lupa.png) no-repeat 350px center;
+	border: solid 1px #707070;
+	padding: 9px 10px 9px 32px;
+	width: 350px;
+
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+.form-control:-moz-placeholder {
+	color: #999;
+}
+.form-control::-webkit-input-placeholder {
+	color: #999;
+}
+
+.search {
+    grid-column: 2;
+    position: absolute;
+    right: 230px;
+    top: 25px;       
+}
+
+/*lista de meliponário pagos*/
+.classified{     
+    border-left: 1px solid #707070;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.img-melipo{
+    width: 150px;
+    height:150px;
+    background-color: rgba(208, 210, 211, .30)
+}
+
+.classified img{
+    border-radius: 5%;        
+}
+
+.classified img{
+    
+    padding: 8px;
+    border-radius: 0px;
+}
+
+.classified__content{
+    margin-left: 30px;
+    background-color: rgba(208, 210, 211, .30)          
+}
+
+.classified table{
+margin-top: 10px;
+width: 80%;
+border-collapse: collapse;
+color: #707070;
+font-family: ibm-plex-sans, sans-serif;
+}
+
+
+.classified__content ul{    
+    width: 300px;
+    height: 20px;
+    background-color:#D0D2D3;
+    border-radius: 4px;
+    border-top: 10px;
+    color: #707070;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.classified__content a, span{
+    padding-left: 15px;
+    color: #545454;
+    font-family: ibm-plex-sans, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.classified__content h3 {
+    margin-top: 10px;
+    padding-left: 15px;    
+    border-bottom: 1px solid #ff8000;
+    width: 80%;
+    color: #545454;
+    font-family: ibm-plex-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.classified__content li{
+    color: #545454;
+    font-family: ibm-plex-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+
+.classified__content button{
+    position: relative;
+    left: 580px;
+    bottom: 20px;
+    width: auto;
+    padding: .75em 1.5em;
+    display: inline-block;
+    background-color: #ff8000;
+    border: 1.5px solid #707070;
+    border-radius: 2px;
+    color: white;
+    font-size: .8em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 
 /*
 Ajustes Código Café
 */
 .sidebar__filter{
     grid-column: 2;
+}
+
+.sidebar li{
+ display: block;
+ padding: 10px;
+ text-align: left; 
 }
 
 .classified{

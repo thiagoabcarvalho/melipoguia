@@ -1,0 +1,38 @@
+:root{
+    --size--container: 1408px;
+    --grid--container: 1fr minmax(auto, var(--size--container)) 1fr;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    font-size: 16px;
+    font-family: 'ibm-plex-sans', sans-serif;    
+}
+
+
+.register_melipoguia{
+    display: grid;
+    grid-template-columns: var(--grid--container);  
+    
+}
+
+.company{
+    grid-column: 2;   
+    background-color: #fbfbfb;
+    border-radius: 0 0 10px 10px;
+    border: 2px solid #f9a51a;
+}
+
+img{
+    position: relative;
+    left: 15px;
+    top: 30px;
+}
+
+

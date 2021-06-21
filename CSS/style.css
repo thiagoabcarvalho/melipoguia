@@ -11,7 +11,8 @@
 }
 
 body, html{
-    font-size: 16px;    
+    font-size: 16px;
+    font-family: 'ibm-plex-sans', sans-serif;    
 }
 
 .navbar {
@@ -95,7 +96,7 @@ li{
 a{
     text-decoration: none;
     color: white;
-    font-family: rooney-sans, sans-serif;    
+    font-family: 'rooney-sans', sans-serif;    
 }
 
 .nav_header{    
@@ -111,19 +112,142 @@ a{
     z-index: -3;
 }
 
-.banner-bees{
+.banner{
     display: grid;
-    grid-template-columns: var(--grid--container);   
+    grid-template-columns: var(--grid--container);
+    /* grid-template-columns: 1fr minmax(auto,1370px) 1fr; */
+    grid-template-rows: 2;     
 }
 
 .banner-bees {
-    grid-column: 2;             
+    grid-column: 2;                
 }
+
+.banner-bees img{
+   max-width: 100%;
+}
+
+
+/* start slide banner */
+
+.slider_position{
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 30px;
+}
+
+.slider{
+    width: 1408px;
+    height: auto;    
+    overflow: hidden;
+  }
+  
+.slides{
+    width: 500%;
+    height: 392px;
+    display: flex;
+  }
+  
+.slides input{
+    display: none;
+  }
+  
+.slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+.slide img{
+    width: 1408px;
+    height: auto;
+  }
+  
+  /*css for manual slide navigation*/
+  
+.navigation-manual{
+    position: absolute;
+    width: 1408px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+.manual-btn{
+    border: 2px solid #ff8000;
+    padding: 5px;
+    width: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+.manual-btn:hover{
+    background: #ff8000;
+  }
+  
+#radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+#radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+#radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 1408px;
+    justify-content: center;
+    margin-top: 352px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #ff8000;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #ff8000;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #ff8000;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #ff8000;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #ff8000;
+  }
+
+/* end slide banner */
+
 
 .sidebar{
     display: grid;
     grid-template-columns: 1fr minmax(200px,290px) minmax(auto,880px) 1fr;
-    font-family: ibm-plex-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -181,7 +305,7 @@ input, select{
     border: 3px solid transparent;    
 }
 .sidebar__filter{
-    font-family: rooney-sans,sans-serif;
+    font-family: 'rooney-sans',sans-serif;
     font-weight: 300;
     font-style: normal;
    
@@ -227,7 +351,6 @@ input, select{
     width: 80%;
     border-collapse: collapse;
     color: #707070;
-    font-family: ibm-plex-sans, sans-serif;
     left: 15px;
 }
 
@@ -244,17 +367,14 @@ input, select{
 }
 .classified__content li{
     color: #545454;
-    font-family: ibm-plex-sans, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1em;
-    
+    font-size: 1em;    
 }
 
 .classified__content a, span{
     padding-left: 15px;
     color: #545454;
-    font-family: ibm-plex-sans, sans-serif;
     font-weight: 600;
     font-style: normal;
 }
@@ -262,10 +382,9 @@ input, select{
 .classified__content h3 {
     margin-top: 10px;
     padding-left: 15px;    
-    border-bottom: 1px solid #ff8000;
+    /* border-bottom: 1px solid #ff8000; */
     width: 80%;
     color: #545454;
-    font-family: ibm-plex-sans, sans-serif;
     font-weight: 800;
     font-style: normal;
 }
@@ -331,3 +450,137 @@ Ajustes Código Café
     margin: 0;
     padding: .5rem;
 }
+
+/*classificado geral*/
+
+.general{
+    display: grid;
+    grid-template-columns: 1fr minmax(200px,290px) minmax(auto,440px) minmax(auto,440px) 1fr;
+}
+
+.classified__general{
+    grid-column: 3;
+    grid-row: 1;
+    padding-left: 20px;
+    margin-left: 20px;    
+}
+
+.classified__general__two{
+    grid-column: 4;
+    grid-row: 1;
+    padding-left: 20px;
+    margin-left: 20px;    
+}
+
+.general img{
+    width: 171px;
+    height: 171px;
+    border-radius: 4px;
+}
+
+.general h3{
+    /* border-bottom: 2px solid #F9A51A; */
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;    
+}
+
+.general a{
+    color: #545454;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+.general ul{
+    position: relative;
+    right: 4px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    color: #545454;       
+}
+
+.contact__melipo li{
+    padding: 0 5px 0 2px;
+    margin-right: 23px;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+
+}
+
+.classified__content__general{
+    position: relative;
+    left: 200px;
+    bottom: 180px
+}
+
+
+.service {
+    margin-top: 6px;
+    width: 222px;
+    height: 23px;
+    border: 1px solid #D0D2D3;
+    border-radius: 5px;
+}
+
+.service li{
+    display: inline;
+    padding: 0px 5px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #707070;
+    position: relative;
+    bottom: 3px;
+        
+}
+
+.general button{
+    margin: 10px 120px;
+}
+
+/* Rodapé */
+footer{
+    display: grid;
+    grid-template-columns: var(--grid--container);
+    /* grid-template-columns: 1fr minmax(200px,290px) minmax(auto,440px) minmax(auto,440px) 1fr; */
+    height: 500px;
+    background: rgb(255,213,0);
+    background: linear-gradient(0deg, rgba(255,213,0,1) 0%, rgba(251,175,20,1) 58%);
+}
+
+footer h3{   
+    grid-column: 2;
+    padding-top: 50px;   
+}
+
+.inscreva{
+    grid-column: 2;
+}
+
+.mensagem{
+    grid-column: 3;
+    color: white;
+    padding-top: 50px;
+}
+
+.mensagem p{
+    padding-bottom: 5px;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 16px;
+    color: #545454;       
+}
+
+.inscreva input{
+    width: 210px;
+    height: 40px;
+}
+
+
+
+

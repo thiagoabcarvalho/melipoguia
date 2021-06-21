@@ -62,9 +62,51 @@
         <div class="banner-bees">
             <img src="./IMG/banner--3D.png" alt="">
         </div>
-        <div>
-            <img src="./IMG/QUEIMA-TOTAL.png">
+
+        <!-- banner-->
+        <div class="slider slider_position">
+            <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                <div class="slide first">
+                    <img src="./IMG/banner_01.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./IMG/banner_02.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./IMG/banner_03.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./IMG/banner_04.png" alt="">
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                <!--automatic navigation end-->
+            </div>
+            <!--manual navigation start-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!--manual navigation end-->
         </div>
+
+        <!-- acaba banner -->
+
     </section>
     <section class="sidebar">
         <div class="sidebar__filter">
@@ -148,11 +190,61 @@
             </div>
         </section>
     </section>
+    <section class="general">
+        <div class="classified__general">
+            <img class="img-melipo" src="./IMG/tapajos.png" alt="logo meliponário tapajós">
+            <div class="classified__content__general">
+                <h3>Meliponário Tapajós</h3>
+                <ul class="contact__melipo">
+                    <li>Vinhedo | São Paulo</li>
+                    <li>(11) 9.8155-5654</li>
+                    <li><a href="#">www.meliponario.com.br</a></li>
+                </ul>
+
+                <ul class="service">
+                    <li>enxame</li>
+                    <li>atrativo</li>
+                    <li>curso</li>
+                </ul>
+                <button class="button-main">Saiba mais</button>
+            </div>
+        </div>
+        <div class="classified__general__two">
+            <img class="img-melipo" src="./IMG/tapajos.png" alt="logo meliponário tapajós">
+            <div class="classified__content__general">
+                <h3>Meliponário Tapajós</h3>
+                <ul class="contact__melipo">
+                    <li>Vinhedo | São Paulo</li>
+                    <li>(11) 9.8155-5654</li>
+                    <li><a href="#">www.meliponario.com.br</a></li>
+                </ul>
+                <ul class="service">
+                    <li>enxame</li>
+                    <li>atrativo</li>
+                    <li>curso</li>
+                </ul>
+                <button class="button-main btn__general">Saiba mais</button>
+            </div>
+        </div>
+    </section>
+    </section>
     <footer>
-        <h3>SOS Abelhas sem Ferrão</h3>
-        <span>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas espécies
-            naticas sem ferrão. Concientizar é proteger!</span>
+        <h3><img src="./IMG/LOGO.png" alt="logo sos abelhas sem ferrão"></h3>
+        <div class="mensagem">
+            <p>SOS Abelhas Sem Ferrão</p>
+            <span>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas
+                espécies
+                naticas sem ferrão. Concientizar é proteger!</span>
+        </div>
+        <div class="inscreva">
+            <input type="text" name="q" id="email" placeholder="deixe seu melhor e-mail">
+            <button class="button-main button-insc">enviar</button>
+        </div>
+        <div class="desenvolvido">
+            <p>cod.café</p>
+        </div>
     </footer>
 </body>
+<script src="./script.js"></script>
 
 </html>

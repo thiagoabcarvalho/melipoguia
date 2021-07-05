@@ -1,3 +1,5 @@
+// banner principal
+
 type = "text/javascript"
 var counter = 1;
 setInterval(function () {
@@ -7,3 +9,4 @@ setInterval(function () {
         counter = 1;
     }
 }, 5000);
+

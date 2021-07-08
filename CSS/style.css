@@ -52,28 +52,52 @@ body, html{
     background-color: white;
 }
 
-nav{
+.nav-light{
     background: linear-gradient(0deg, rgba(251,183,18,1) 0%, rgba(254,209,6,1) 99%);
     height: 90px;
 }
 
 .container-fluid{
     grid-column: 2;
-    padding-top: 15px;    
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
 }
 
-.sidebar-left form{
-    border-bottom: 1px solid #707070;
-    padding-bottom: 20px;
-}
-.form-control {
-	outline: none;
+
+/*formulário de busca menu*/
+.form-control[type=search] {
+    -webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
 }
 
-.form-sidebar{
-    padding-bottom: 20px;
+.form-control::-webkit-search-decoration,
+.form-control::-webkit-search-cancel-button {
+    display: none; 
 }
 
+.form-control[type=search] {
+    background: #ededed url(../IMG/icon-lupa.png) no-repeat 350px center;
+	border: solid 1px #707070;
+	padding: 9px 10px 9px 32px;
+	width: 350px;
+    
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+.form-control:-moz-placeholder {
+    color: #999;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999;
+}
+
+/* MENU */
 .nav_header {
     display: grid;
     grid-template-columns: var(--grid--container);          
@@ -81,19 +105,25 @@ nav{
 
 .justify-content-center{
     grid-column: 2;
+    height: 60px;    
 }
 
 ul {
-    list-style: none;    
-    text-align:center;         
-}
-
-li{
-    display: inline-block;
-    padding: 20px 30px 0 30px;   
+    height: 60px;
+    list-style: none; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;            
 }
 
 a{
+    display: flex;
+    padding: a 16px;
+    height: 60px;
+    align-items: center;
+}
+
+.nav-link{
     text-decoration: none;
     color: white;
     font-family: 'rooney-sans', sans-serif;    
@@ -105,6 +135,8 @@ a{
     height: 60px;       
 }
 
+/* BANNER | HERO*/
+
 .img-hero{
     width: 100%;
     position: relative;
@@ -115,7 +147,6 @@ a{
 .banner{
     display: grid;
     grid-template-columns: var(--grid--container);
-    /* grid-template-columns: 1fr minmax(auto,1370px) 1fr; */
     grid-template-rows: 2;     
 }
 
@@ -124,11 +155,11 @@ a{
 }
 
 .banner-bees img{
-   max-width: 100%;
+    max-width: 100%;
 }
 
 
-/* start slide banner */
+/* BANNER | start slide */
 
 .slider_position{
     grid-column: 2;
@@ -140,38 +171,38 @@ a{
     width: 1408px;
     height: auto;    
     overflow: hidden;
-  }
-  
+}
+
 .slides{
     width: 500%;
     height: 392px;
     display: flex;
-  }
-  
+}
+
 .slides input{
     display: none;
-  }
-  
+}
+
 .slide{
     width: 20%;
     transition: 2s;
-  }
-  
+}
+
 .slide img{
     width: 1408px;
     height: auto;
-  }
+}
   
-  /*css for manual slide navigation*/
-  
+/*css for manual slide navigation*/
+
 .navigation-manual{
     position: absolute;
     width: 1408px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
-  }
-  
+}
+
 .manual-btn{
     border: 2px solid #ff8000;
     padding: 5px;
@@ -179,119 +210,98 @@ a{
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
-  }
-  
+}
+
 .manual-btn:not(:last-child){
     margin-right: 40px;
-  }
-  
+}
+
 .manual-btn:hover{
     background: #ff8000;
-  }
-  
+}
+
 #radio1:checked ~ .first{
     margin-left: 0;
-  }
-  
-  #radio2:checked ~ .first{
+}
+
+#radio2:checked ~ .first{
     margin-left: -20%;
-  }
-  
+}
+
 #radio3:checked ~ .first{
     margin-left: -40%;
-  }
-  
+}
+
 #radio4:checked ~ .first{
     margin-left: -60%;
-  }
-  
-  /*css for automatic navigation*/
-  
-  .navigation-auto{
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
     position: absolute;
     display: flex;
     width: 1408px;
     justify-content: center;
     margin-top: 352px;
-  }
-  
-  .navigation-auto div{
+}
+
+.navigation-auto div{
     border: 2px solid #ff8000;
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
+}
+
+.navigation-auto div:not(:last-child){
     margin-right: 40px;
   }
   
   #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #ff8000;
+      background: #ff8000;
+    }
+    
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: #ff8000;
+    }
+    
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: #ff8000;
+    }
+    
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: #ff8000;
   }
   
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #ff8000;
-  }
+  /* end slide banner */
   
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #ff8000;
-  }
+  /* SIDEBAR */
   
-  #radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #ff8000;
-  }
-
-/* end slide banner */
-
-
-.sidebar{
+  .sidebar{
+    max-width: 1408px;
+    width: 100%;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr minmax(200px,290px) minmax(auto,880px) 1fr;
-    font-weight: 400;
-    font-style: normal;
+    grid-template-columns: 1fr minmax(200px,300px) minmax(auto,880px) 1fr;    
 }
 
-
- /*formulário de busca menu*/
- .form-control[type=search] {
-	-webkit-appearance: textfield;
-	-webkit-box-sizing: content-box;
-	font-family: inherit;
-	font-size: 100%;
+.sidebar-left form{
+    border-bottom: 1px solid #707070;
+    padding-bottom: 20px;
+    grid-row: 1/3;
+    
+    
+}
+.form-control {
+    outline: none;
 }
 
-.form-control::-webkit-search-decoration,
-.form-control::-webkit-search-cancel-button {
-	display: none; 
+.form-sidebar{
+    
+    padding-bottom: 20px;
+    
 }
 
-.form-control[type=search] {
-	background: #ededed url(../IMG/icon-lupa.png) no-repeat 350px center;
-	border: solid 1px #707070;
-	padding: 9px 10px 9px 32px;
-	width: 350px;
-
-	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-	box-shadow: 0 0 5px rgba(109,207,246,.5);
-}
-
-.form-control:-moz-placeholder {
-	color: #999;
-}
-.form-control::-webkit-input-placeholder {
-	color: #999;
-}
-
-.search {
-    grid-column: 2;
-    position: absolute;
-    right: 230px;
-    top: 25px;       
-}
-
-/*sidebar*/
 input, label, select{
     display: inline-block;
     width: 100%;
@@ -307,8 +317,7 @@ input, select{
 .sidebar__filter{
     font-family: 'rooney-sans',sans-serif;
     font-weight: 300;
-    font-style: normal;
-   
+    font-style: normal;  
 }
 
 .link-filter{
@@ -321,6 +330,7 @@ input, select{
     color:#F9A51A;
     font-weight: 700;
     font-style: normal;
+    flex-direction: column;
 }
 /*lista de meliponário pagos*/
 .classified{     
@@ -400,8 +410,22 @@ Ajustes Código Café
 */
 .sidebar__filter{
     grid-column: 2;
+    grid-row: 1;
 }
-
+.sidebar__filter ul{
+    height: auto;
+    align-items: flex-start;
+}
+.sidebar__filter ul li{
+    width: 100%;
+    padding: 0;
+}
+.sidebar__filter ul li a{
+    display: block;
+    padding: 0 8px;
+    height: auto;
+    line-height: 2rem;
+}
 .sidebar li{
  display: block;
  padding: 10px;
@@ -547,7 +571,6 @@ Ajustes Código Café
 footer{
     display: grid;
     grid-template-columns: var(--grid--container);
-    /* grid-template-columns: 1fr minmax(200px,290px) minmax(auto,440px) minmax(auto,440px) 1fr; */
     height: 500px;
     background: rgb(255,213,0);
     background: linear-gradient(0deg, rgba(255,213,0,1) 0%, rgba(251,175,20,1) 58%);

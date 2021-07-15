@@ -23,6 +23,7 @@
             </div>
         </div>
         <div class="nav_header">
+            <!-- PRECISEI FAZER ALGUMAS ALTERAÇÕES NO CSS  deixar no 1408-->
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -138,18 +139,21 @@
                     <button class="button-stroke">limpar filtro</button>
                 </form>
             </div>
-            <ul>
-                <li class="list-item-producto"><a class="link-filter" href="#">Não Comencializa</a></li>
-                <li class="list-item-producto">
-                    <h3>Descubra quem vende:</h3>
-                </li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Enxames</a></li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Caixas</a></li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Iscas</a></li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Atrativo</a></li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Mel</a></li>
-                <li class="list-item-producto"><a class="link-filter" href="#">Curso</a></li>
-            </ul>
+
+            <div class="sidebar-product">
+                <ul>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Não Comencializa</a></li>
+                    <li class="list-item-producto">
+                        <h3>Descubra quem vende:</h3>
+                    </li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Enxames</a></li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Caixas</a></li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Iscas</a></li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Atrativo</a></li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Mel</a></li>
+                    <li class="list-item-producto"><a class="link-filter" href="#">Curso</a></li>
+                </ul>
+            </div>
         </div>
         <!-- EXIBIÇÃO DO MELIPONÁRIO -->
         <div class="localization">
@@ -186,6 +190,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="description">
             <p class="text-meliponario">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempor ex vitae purus porta, a accumsan
@@ -228,34 +234,50 @@
                 <button class="button-mkt">Não comercializa</button>
             </div>
             <address>
+                <h2>Contato:</h2>
                 <ul class="contact">
                     <li><img src="./IMG/telephone.png" alt="telefone">(011) 9.8181-5454 | (011) 5487-5689</li>
-                    <li><img src="./IMG/globe2.png" alt="internet">
-                        <a href="https://www.meliponario.com">www.meliponario.com</a>
-                    </li>
+                    <li><img src="./IMG/globe2.png" alt="internet"><a
+                            href="https://www.meliponario.com">www.meliponario.com</a></li>
                     <li><img src="./IMG/at.png" alt="e-mail">meliponário@tapajos.com</li>
                 </ul>
             </address>
+
+
+            <!-- REDES SOCIAIS -->
+            <div class="sociais">
+                <ul>
+                    <li class="list-item-sociais"><img src="./IMG/instagram_02.png" alt="instagram"><a
+                            href="https://www.instagram.com/meliponariotapajos/"></a></li>
+                    <li class="list-item-sociais"><img src="./IMG/facebook_02.png" alt="facebook"><a
+                            href="https://www.facebook.com/meliponariotapajos/"></a></li>
+                    <li class="list-item-sociais"><img src="./IMG/youtube_02.png" alt="youtube"><a
+                            href="https://www.youtube.com/channel/UCXwxRfP2PGSFB_hW1nd-f5g"></a></li>
+                </ul>
+            </div>
         </div>
 
-        </div>
+
     </section>
-    </section>
-    <footer>
+
+    <footer class="baseboard">
         <h3><img src="./IMG/LOGO.png" alt="logo sos abelhas sem ferrão"></h3>
         <div class="mensagem">
             <p>SOS Abelhas Sem Ferrão</p>
-            <span>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas
+            <p>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas
                 espécies
-                naticas sem ferrão. Concientizar é proteger!</span>
+                nativas sem ferrão. Concientizar é proteger!</p>
         </div>
         <div class="inscreva">
             <input type="text" name="q" id="email" placeholder="deixe seu melhor e-mail">
-            <button class="button-main button-insc">enviar</button>
+            <button class="button-main button-insc">inscrever</button>
+            <p>Deixe seu e-mail para que possamos te avisar das nossas atividades.</p>
         </div>
         <div class="desenvolvido">
-            <p>cod.café</p>
+            <a href="https://codigo.cafe"><img src="./IMG/codigocafe.svg" alt="codigo café"></a>
         </div>
+        <p class="rights">&copy; 2021 - Todos direitos reservados</p>
+        <div class="arrow"><img src="./IMG/seta-8.png" alt="seta para cima"></div>
     </footer>
 </body>
 <script src="./script.js"></script>

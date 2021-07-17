@@ -165,23 +165,6 @@
                         <h2 class="meliponario">Meliponário Tapajós</h2>
                         <p class="address">Rua: dos bobos, nº0 - Jardim das Flores</p>
                     </div>
-                    <ul class="star">
-                        <li class="list-item"><img class="star-dimension" src="./IMG/star.png"
-                                alt="estrela de pontuação">
-                        </li>
-                        <li class="list-item"><img class="star-dimension" src="./IMG/star.png"
-                                alt="estrela de pontuação">
-                        </li>
-                        <li class="list-item"><img class="star-dimension" src="./IMG/star.png"
-                                alt="estrela de pontuação">
-                        </li>
-                        <li class="list-item"><img class="star-dimension" src="./IMG/star.png"
-                                alt="estrela de pontuação">
-                        </li>
-                        <li class="list-item"><img class="star-dimension" src="./IMG/star.png"
-                                alt="estrela de pontuação">
-                        </li>
-                    </ul>
                     <ul class="share">
                         <li class="list-item"><img class="share-heart" src="./IMG/share.png" alt="compartilhamento">
                         </li>
@@ -222,16 +205,14 @@
                 <li class="meliponario-photos"><img src="./IMG/meliponario.jpg" alt="carrocel do meliponário"></li>
                 <li class="meliponario-photos"><img src="./IMG/meliponario.jpg" alt="carrocel do meliponário"></li>
             </ul>
-
-            <!-- ESTOU COM DÚVIDA SE FAÇO LISTA OU DEIXO COMO BOTÃO MESMO (POIS SERÁ TAG'S) -->
             <div class="market">
                 <h2>Comercializamos:</h2>
-                <button class="button-mkt">Curso</button>
-                <button class="button-mkt">Mel</button>
-                <button class="button-mkt">Caixas</button>
-                <button class="button-mkt">Atrativo</button>
-                <button class="button-mkt">Enxames</button>
-                <button class="button-mkt">Não comercializa</button>
+                <span class="button-mkt">Curso</span>
+                <span class="button-mkt">Mel</span>
+                <span class="button-mkt">Caixas</span>
+                <span class="button-mkt">Atrativo</span>
+                <span class="button-mkt">Enxames</span>
+                <span class="button-mkt">Não comercializa</span>
             </div>
             <address>
                 <h2>Contato:</h2>
@@ -242,8 +223,6 @@
                     <li><img src="./IMG/at.png" alt="e-mail">meliponário@tapajos.com</li>
                 </ul>
             </address>
-
-
             <!-- REDES SOCIAIS -->
             <div class="sociais">
                 <ul>
@@ -261,24 +240,43 @@
     </section>
 
     <footer class="baseboard">
-        <h3><img src="./IMG/LOGO_ROD.png" alt="logo sos abelhas sem ferrão"></h3>
-        <div class="mensagem">
-            <p>SOS Abelhas Sem Ferrão</p>
-            <p>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas
-                espécies
-                nativas sem ferrão. Concientizar é proteger!</p>
+        <div>
+            <h3><img src="./IMG/LOGO_ROD.png" alt="logo sos abelhas sem ferrão"></h3>
+            <div class="mensagem">
+                <p>SOS Abelhas Sem Ferrão</p>
+                <p>Nossa maior missão, é mostrar para as pessoas a importaênacia das abelhas, principalmente nossas
+                    espécies
+                    nativas sem ferrão. Concientizar é proteger!</p>
+            </div>
+            <div class="inscreva">
+                <input type="text" name="q" id="email" placeholder="deixe seu melhor e-mail">
+                <button class="button-main button-insc">inscrever</button>
+                <p>Deixe seu e-mail para que possamos te avisar das nossas atividades.</p>
+            </div>
+            <div class="networks">
+                <p>Siga-nos.</p>
+                <ul class="item-social">
+                    <li class="item-social-networks"><a
+                            href="https://www.facebook.com/search/top?q=sos%20abelhas%20sem%20ferrão"></a><img
+                            src="./IMG/facebook-8.png" alt="facebook"></li>
+                    <li class="item-social-networks"><a href="https://www.instagram.com/sosabelhassemferrao/"></a><img
+                            src="./IMG/instagram-8.png" alt="instagram"></li>
+                    <li class="item-social-networks"><a
+                            href="https://www.linkedin.com/company/sosabelhassemferrao/about/"></a><img
+                            src="./IMG/linkedin-8.png" alt="linkedin"></li>
+                    <li class="item-social-networks"><a
+                            href="https://www.youtube.com/channel/UC6ko1X56pisZOpwbChTwvQQ"></a><img
+                            src="./IMG/youtube-8.png" alt="youtube">
+                    </li>
+                </ul>
+            </div>
+            <div class="desenvolvido">
+                <a href="https://codigo.cafe"><img src="./IMG/codigocafe.svg" alt="codigo café"></a>
+            </div>
+            <p class="rights">&copy; 2021 - Todos direitos reservados</p>
         </div>
-        <div class="inscreva">
-            <input type="text" name="q" id="email" placeholder="deixe seu melhor e-mail">
-            <button class="button-main button-insc">inscrever</button>
-            <p>Deixe seu e-mail para que possamos te avisar das nossas atividades.</p>
-        </div>
-        <div class="desenvolvido">
-            <a href="https://codigo.cafe"><img src="./IMG/codigocafe.svg" alt="codigo café"></a>
-        </div>
-        <p class="rights">&copy; 2021 - Todos direitos reservados</p>
-        <div class="arrow"><img src="./IMG/seta-8.png" alt="seta para cima"></div>
     </footer>
+    <div class="arrow"><img src="./IMG/seta-8.png" alt="seta para cima"></div>
 </body>
 <script src="./script.js"></script>
 

@@ -103,6 +103,12 @@ body, html{
     grid-template-columns: var(--grid--container);          
 }
 
+.nav_header{
+    display: block;
+    background: rgba(10, 10, 10, 0.6);
+    height: 60px;       
+}
+
 .justify-content-center{
     grid-column: 2;
     height: 60px;    
@@ -129,11 +135,6 @@ body, html{
     font-family: 'rooney-sans', sans-serif;    
 }
 
-.nav_header{    
-    display: block;
-    background: rgba(10, 10, 10, 0.6);
-    height: 60px;       
-}
 
 /* BANNER | HERO*/
 
@@ -372,7 +373,8 @@ input, select{
     left: 15px;
 }
 
-.classified__content ul{    
+.classified__content ul{
+    list-style: none;    
     width: 300px;
     height: auto;
     background-color:#D0D2D3;
@@ -619,12 +621,12 @@ Ajustes Código Café
     font-size: 16px;    
 }
 
-.star-dimension, .share-heart{
+.share-heart{
     width: 30px;
     height: auto;
 }
 
-.star, .share{    
+.share{    
     display: flex;
     list-style: none;
     padding: 10px 10px 0px 0px;
@@ -745,6 +747,7 @@ footer{
     background: #262626;   
 }
 
+
 footer h3{       
     grid-column: 2;
     padding-top: 50px;   
@@ -828,3 +831,86 @@ footer h3{
     width: 40px;    
 }
 
+
+
+
+/*Ajustes Código Café*/
+
+/*pai*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1408px) 1fr;
+}
+.footer * {
+    height: auto;
+}
+
+/*container*/
+footer div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 2;
+}
+
+/*primeiro filho*/
+footer h3{
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+}
+
+/*segundo filho*/
+footer .mensagem{
+    grid-column: 1;
+    grid-row: 2;
+    display: block;
+}
+
+/*terceiro filho*/
+footer .inscreva{
+    grid-column: 2/4;
+    display: block;
+}
+footer .inscreva p {
+    display: block;
+}
+/*redes sociais - filho bastardo*/
+footer .networks{
+    grid-column: 2/4;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+footer .networks ul{
+    margin-top: 12px;
+}
+footer .networks ul li {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.item-social{
+    list-style: none;
+    display: flex;
+}
+
+.item-social-networks{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/*quarto filho*/
+footer .desenvolvido{
+    grid-column: 3;
+    grid-row: 3;
+    text-align: right;
+}
+
+/*quinto filho*/
+footer .rights{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
